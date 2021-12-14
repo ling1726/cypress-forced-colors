@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "types": ["cypress"],
+    "target": "es6",
+    "module": "commonjs",
+    "lib": ["DOM", "DOM.Iterable", "ES2016"],
+    "outDir": "dist",
+    "declaration": false,
+    "strict": true,
+    "moduleResolution": "node"
+  },
+  "include": ["./index.ts", "./index.d.ts", "./cypress/integration/**/*.spec.ts"]
+}
