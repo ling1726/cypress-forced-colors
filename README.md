@@ -7,6 +7,12 @@ through the chrome devtools protocol.
 
 The devtools APIs used by this library can be found [on the official chrome devtools protocol docs](https://chromedevtools.github.io/devtools-protocol/tot/Emulation/#method-setEmulatedMedia).
 
+## Why
+
+Forced colors is a browser mode where color CSS properties are overriden. You can find a full list of affected properties on the [MDN docs](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/forced-colors). This browser feature is leveraged notably by Windows High Contrast Mode, which will override all colors with system colors to provide more contrast for users that need it.
+
+Chrome devtools has [media emulation as a stable feature](https://chromedevtools.github.io/devtools-protocol/tot/Emulation/#method-setEmulatedMedia) and in version 98, supports full emulation of forced colors. This plugin can be used to have an easy way of testing acessible high contrast designs without needing a windows machine or enabling a windows os feature.
+
 ## Installation
 
 ```
