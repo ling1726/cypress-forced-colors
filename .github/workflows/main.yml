@@ -31,10 +31,11 @@ jobs:
           node-version: 14.x
 
       - name: Setup Chrome
-        uses: browser-actions/setup-chrome@v0.0.0
+        uses: browser-actions/setup-chrome@latest
         with:
           # forced-colors emulation is only available on chrome version > 98 for now
-          chromium-version: dev
+          chrome-version: dev
+      - run: chrome --version
 
       - run: npm install
       - run: npm run build
