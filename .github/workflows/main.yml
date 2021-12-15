@@ -30,14 +30,11 @@ jobs:
         with:
           node-version: 14.x
 
-      - name: Setup chrome in CI
-        uses: browser-actions/setup-chrome@latest
-
-      # forced-colors mode is only supported on chromium > 98 for now
-      - name: Install Chrome dev
-        run: chrome --version
+      - name: Setup Chrome
+        uses: browser-actions/setup-chrome@v0.0.0
         with:
-          chrome-version: dev
+          # forced-colors emulation is only available on chrome version > 98 for now
+          chromium-version: dev
 
       - run: npm install
       - run: npm run build
