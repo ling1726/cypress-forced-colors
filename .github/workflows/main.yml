@@ -29,12 +29,19 @@ jobs:
         uses: actions/setup-node@v2.5.0
         with:
           node-version: 14.x
-          
+
+      - name: Setup Chrome
+        uses: browser-actions/setup-chrome@latest
+        with:
+          # forced-colors emulation is only available on chrome version > 98 for now
+          chrome-version: dev
+      - run: chrome --version
+
       - run: npm install
       - run: npm run build
-      - run: npm run test
-      - name: Archive test video
+      - run: npm run test:chrome
+      - name: Archive test videos
         uses: actions/upload-artifact@v2
         with:
-          name: test-video
+          name: chrome-test
           path: cypress/videos/index.spec.ts.mp4
