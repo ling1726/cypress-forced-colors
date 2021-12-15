@@ -7,7 +7,7 @@
   "files": ["./dist", "./index.d.ts"],
   "scripts": {
     "start": "cypress open",
-    "test": "cypress run",
+    "test": "cypress run --browser chrome:dev",
     "build": "tsc"
   },
   "author": "",

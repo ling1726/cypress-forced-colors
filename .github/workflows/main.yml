@@ -29,12 +29,19 @@ jobs:
         uses: actions/setup-node@v2.5.0
         with:
           node-version: 14.x
-          
+
+      # forced-colors mode is only supported on chromium > 98 for now
+      - name: Setup chrome dev
+      - uses: browser-actions/setup-chrome@latest
+      - run: chrome --version
+        with:
+          chrome-version: dev
+
       - run: npm install
       - run: npm run build
       - run: npm run test
-      - name: Archive test video
+      - name: Archive test videos
         uses: actions/upload-artifact@v2
         with:
-          name: test-video
-          path: cypress/videos/index.spec.ts.mp4
+          name: code-coverage-report
+          path: output/test/code-coverage.html
