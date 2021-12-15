@@ -32,3 +32,9 @@ jobs:
           
       - run: npm install
       - run: npm run build
+      - run: npm run test
+      - name: Archive test video
+        uses: actions/upload-artifact@v2
+        with:
+          name: test-video
+          path: cypress/videos/index.spec.ts.mp4
