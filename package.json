@@ -13,7 +13,8 @@
     "test:chrome": "cypress run --browser chrome",
     "test:edge": "cypress run --browser edge",
     "build": "tsc",
-    "release": "release-it"
+    "release": "release-it",
+    "prepublishOnly": "npm run build"
   },
   "author": "",
   "license": "ISC",
