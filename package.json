@@ -1,6 +1,6 @@
 {
   "name": "cypress-forced-colors",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Cypress commands to enable and disable browser forced colors mode",
   "main": "./dist/index.js",
   "typings": "./index.d.ts",
